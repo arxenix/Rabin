@@ -1,10 +1,11 @@
 package com.ankursundara.rabin;
 
 import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Rabin {
-    private static Random r = new Random();
+    private static Random r = new SecureRandom();
     private static BigInteger TWO = BigInteger.valueOf(2);
     private static BigInteger THREE = BigInteger.valueOf(3);
     private static BigInteger FOUR = BigInteger.valueOf(4);
