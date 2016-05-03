@@ -92,10 +92,11 @@ public class Rabin {
      * @return a random blum prime
      */
     public static BigInteger blumPrime(int bitLength) {
-        BigInteger p = BigInteger.probablePrime(bitLength, r);
-        while(!p.mod(FOUR).equals(THREE)) {
+        BigInteger p;
+        do {
             p=BigInteger.probablePrime(bitLength,r);
         }
+        while(!p.mod(FOUR).equals(THREE));
         return p;
     }
 }
